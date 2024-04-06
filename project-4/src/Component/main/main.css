@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.contienter {
+    margin: 0 auto;
+    padding: 0 12px;
+
+}
+
+.row {
+    max-width: 1320px;
+}
+
+.grid_for_cards {
+    display: grid;
+    padding-bottom: 50px !important;
+}
+
+.parent_card {
+    padding: 0 1.5rem;
+    margin-bottom: 30px;
+}
+
+.child_for_card,.details_parent,.person_name{
+    transition: all .35s ease;
+}
+
+.child_for_card:hover {
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.029);
+}
+
+.child_for_card:hover .person_name {
+    color: #ffcc00;
+}
+
+.child_for_card:hover .details_parent {
+    background-color: white;
+}
+
+.details_parent {
+    background-color: #f2f2f2;
+    padding: 1rem 1.5rem;
+}
+
+.person_name {
+    margin-bottom: 5px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+.person_work {
+    color: #757575;
+    text-transform: capitalize;
+    font-size: 1rem;
+    line-height: 1.8;
+    font-family: Nunito;
+}
+
+.img_div {
+    display: flex;
+    cursor: pointer;
+}
+
+.img_content {
+    width: 100%;
+}
+
+/* last component */
+.div1_last {
+    max-width: 636px;
+}
+
+.padding_12 {
+    padding: 0 12px;
+    width: fit-content;
+}
+
+.for_last_com {
+    align-items: start;
+    padding: 0;
+}
+
+.start {
+    text-align: start;
+    margin: 5px 0 15px 0px;
+}
+.paragraph {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 18px;
+    color: #757575;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.8;
+}
+
+.button_parent {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.first_btn,
+.second_btn {
+    padding: 13px 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out 0.1s;
+    cursor: pointer;
+    line-height: initial;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 54.8px;
+    margin-bottom: 15px;
+}
+
+.first_btn {
+    background-color: #ffcc00;
+    color: #231900;
+
+}
+
+.first_btn:hover {
+    background-color: #231900;
+    color: white;
+}
+
+.second_btn:hover {
+    background-color: #231900;
+}
+
+.second_btn {
+    background-color: #071c1f;
+    color: white;
+    margin-left: 4px;
+}
+.img_settings{
+    text-align: right;
+}
+.img_big {
+    height: auto;
+    max-width: 100%;
+}
+@media screen and (max-width:767px) {
+    .grid_for_cards {
+        grid-template-columns: 1fr;
+    }
+
+    .second_btn {
+        margin-left: 0;
+    }
+
+
+
+
+    .start {
+        font-size: 32px;
+    }
+
+
+    .first_btn,
+    .second_btn {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:767px) {
+    .grid_for_cards {
+        margin: 0 auto;
+    }
+
+    .row,
+    .contienter {
+        width: 540px;
+    }
+
+    .img_settings {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .parent_card {
+        padding: 0 12px;
+    }
+
+    .grid_for_cards {
+        margin: 0 auto;
+        padding: 0 12px;
+    }
+
+    .button_parent {
+        flex-direction: row;
+    }
+    .second_btn,.first_btn{
+        margin-bottom: 0;
+
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+    .parent_card {
+        max-width: 360px;
+    }
+
+    .grid_for_cards {
+        gap: 0;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .row,
+    .contienter {
+        width: 720px;
+    }
+    .w_100{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+    .grid_for_cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .row,
+    .contienter {
+        width: 960px;
+    }
+}
+@media screen and (min-width:992px) {
+    .flex_query{
+        display: flex;
+    }
+    .padding_12{
+        width: 50%;
+    }
+    .second_btn{
+        margin-left: 18px;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1399px) {
+    .grid_for_cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .parent_card {
+        width: 285px;
+    }
+
+    .row,
+    .contienter {
+        width: 1140px;
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+
+    .row,
+    .contienter {
+        width: 1320px;
+    }
+
+    .grid_for_cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .parent_card {
+        width: 330px;
+    }
+}
